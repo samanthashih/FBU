@@ -32,7 +32,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://submissions.us-east-1.linodeobjects.com/metau_android/KM8sBj8T.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./KM8sBj8T.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/).
 
