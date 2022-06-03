@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetailsActivity">
+    tools:context=".MovieDetailsActivity"
+    tools:ignore="ExtraText">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -14,10 +15,12 @@
         android:layout_alignParentRight="true"
         android:text="Fantastic Beasts: The Secrets of Dumbledore"
         android:textAppearance="@android:style/TextAppearance.Large"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/rbVoteAverage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"/>
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -35,6 +38,8 @@
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         />
 
+
+
     <TextView
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
@@ -48,6 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rbVoteAverage"
+        android:fontFamily="sans-serif"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

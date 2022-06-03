@@ -1,11 +1,17 @@
 package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
 import org.parceler.Parcels;
@@ -40,5 +46,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // vote avg og /10 stars, divide by 2 to get /5 stars
         float voteAverage = movie.getVoteAverage().floatValue() / 2.0f;
         rbVoteAverage.setRating(voteAverage);
+
+
     }
 }

@@ -25,6 +25,8 @@
         app:layout_constraintTop_toTopOf="@id/ivPoster"
         tools:layout_constraintStart_toEndOf="@id/ivPoster"
         tools:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
         tools:text="Fantastic Beasts: The Secrets of Dumbledore" />
 
     <TextView
@@ -37,6 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivPoster"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:fontFamily="sans-serif"
         tools:text="Professor Albus Dumbledore knows the powerful, dark wizard Gellert Grindelwald is moving to seize control of the wizarding world. Unable to stop him alone, he entrusts magizoologist Newt Scamander to lead an intrepid team of wizards and witches. They soon encounter an array of old and new beasts as they clash with Grindelwald's growing legion of followers." />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
