@@ -22,7 +22,8 @@ public class Movie {
     public Movie() {
     }
 
-
+    //let's make sure that we extra raw string to a variable. 
+    // it can be glass level variable or we can make Constant.java file and use it here.
     public Movie(JSONObject jsonObject) throws JSONException {
         posterPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
