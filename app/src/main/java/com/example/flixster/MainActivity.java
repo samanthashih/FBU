@@ -27,23 +27,28 @@ public class MainActivity extends AppCompatActivity {
     public static final String NOW_PLAYING = "https://api.themoviedb.org/3/movie/now_playing?api_key=963a02bfb23ee0affb6ec56718ae3994";
     public static final String TAG = "MainActivity";
 
-    List<Movie> movies;
+    List<Movie> movies = new ArrayList<>();
+    RecyclerView rvMovies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RecyclerView rvMovies = findViewById(R.id.rvMovies);
-        movies = new ArrayList<>();
-
+        initViews();
+        initNetworkRequest();
+    }
+    
+    public void initViews(){
+        rvMovies = findViewById(R.id.rvMovies);
         //create adapter
         MovieAdapter movieAdapter = new MovieAdapter(this, movies);
         //set adapter on the recyclerview
         rvMovies.setAdapter(movieAdapter);
         //set layout manager on recyclerview
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
-
-
+    }
+    
+    public void initNetworkRequest(){
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(NOW_PLAYING, new JsonHttpResponseHandler() {
             @SuppressLint("NotifyDataSetChanged")
@@ -69,6 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onFailure");
             }
         });
-
     }
+    
 }
