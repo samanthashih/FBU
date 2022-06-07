@@ -37,6 +37,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         //unwrap movie passed in by intent, the simple name = key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
+        
+        // Let keep the class constants as a variable compare to hard coding it.
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
 
         // set title and overview w/ movie stuff
